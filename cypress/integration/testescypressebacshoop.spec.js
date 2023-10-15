@@ -59,7 +59,7 @@ describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
         cy.get('#billing_first_name_field > label').type(nomeFaker)
         cy.get('#billing_last_name').type(sobrenomeFaker)
-        cy.get('#select2-billing_country-container')
+        cy.get('#select2-billing_country-container').click().type('Brasil{enter}')
         cy.get('#billing_address_1').type('Rua Almirante')
         cy.get('#billing_city').type('Rio de Janeiro')
         cy.get('#select2-billing_state-container')
@@ -67,7 +67,7 @@ describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('#billing_phone').type('9999-9999')
         cy.get('#billing_email').type(emailFaker)
         cy.get('#createaccount').click()
-        cy.get('#account_password').type('123456789')
+        cy.get('#account_password').type('teste@teste.123')
         cy.get('#payment_method_cod').click()
         cy.get('#terms').click()
         cy.get('#place_order').click()
